@@ -1,0 +1,155 @@
+// src/components/Booking.scss
+
+.booking-container {
+  padding: 20px;
+
+  .booking-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .room-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .room-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.selected {
+        background-color: #d1e7dd; // Light green for selected card
+      }
+
+      &.unavailable {
+        opacity: 0.5; // Dim unavailable rooms
+        cursor: not-allowed; // Change cursor for unavailable rooms
+      }
+
+      &:hover {
+        background-color: #f1f1f1; // Light grey on hover
+      }
+    }
+  }
+  .booking-details-container{
+
+    .booking-details {
+      display: flex; // Use flex to arrange calendar and slip side by side
+      justify-content: space-between; // Space between calendar and slip
+      margin-top: 20px;
+  
+      .calendar-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 10px;
+        width: 45%;
+        .react-calendar {
+          width: 100%;
+          border-radius: 10px;
+          // Style for the calendar
+          &__tile {
+            transition: background-color 0.3s; // Smooth transition for background color
+  
+            // Add styles for the selected dates
+            &--selected {
+              background-color: #007bff; // Primary blue for selected dates
+              color: white; // Change text color to white for better contrast
+            }
+  
+            // Custom style for hover effect on selected dates
+            &:hover {
+              background-color: rgba(0, 123, 255, 0.5); // Lighten on hover
+            }
+  
+            &.booked {
+              background-color: rgba(255, 0, 0, 0.3); // Light red for booked dates
+              color: black; // Keep text color black for contrast
+              text-decoration: line-through;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+      .booking-slip {
+        width: 45%;
+        padding: 20px; // Increased padding
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9; // Light background for slip
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+        text-align: left; // Align text to the left for better readability
+    
+        h3 {
+            text-align: center;
+            margin-bottom: 15px; // More margin for separation
+            font-size: 18px; // Increase font size for heading
+        }
+    
+        table {
+            width: 100%; // Full width for the table
+            border-collapse: collapse; // Collapse borders
+    
+            th, td {
+                border: none;
+                padding: 10px; // Add padding to cells
+            }
+    
+            th {
+                background-color: #eaeaea; // Light gray background for header
+                font-weight: bold; // Bold header text
+                text-align: left; // Align header text to the left
+            }
+    
+            tr {
+                // Ensure total and subtotal rows have the right alignment
+                td:last-child {
+                    text-align: right; // Align last column to the right
+                }
+            }
+    
+            // Styles for rows with zebra stripe effect
+            tr:nth-child(even) {
+                background-color: #f2f2f2; // Zebra stripe effect for even rows
+            }
+        }
+      }
+    
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      button{
+        margin-top: 10px;
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .booking-button {
+        background-color: #007bff;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+  
+      .clear-button {
+          background-color: #dc3545; // Bootstrap's danger color for clear button
+
+          &:hover {
+              background-color: #c82333; // Darker red on hover
+          }
+      }
+    }
+  }
+}

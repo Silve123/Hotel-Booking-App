@@ -1,0 +1,21 @@
+.my-bookings-container {
+    padding: 1rem;
+  
+    .my-bookings-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .my-bookings-list {
+      list-style-type: none;
+      padding: 0;
+  
+      .booking-item {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  

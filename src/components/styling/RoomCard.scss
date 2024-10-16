@@ -1,0 +1,46 @@
+.room-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &.selected {
+      border-color: #2980b9;
+    }
+  
+    .room-name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  
+    .room-price {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: red;
+    }
+  
+    .room-description {
+      margin-top: 10px;
+      color: #666;
+    }
+  
+    .room-features {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      margin-top: 10px;
+  
+      .feature-item {
+        width: 45%; /* Each feature takes up 50% of the row */
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+        margin-bottom: 5px; /* Space between rows */
+        margin-left: 2.5%;
+        font-size: 0.6em;
+        padding: 1px;
+        border-radius: 5px;
+        color: white;
+        background-color: #2980b9
+      }
+    }
+  }
+  
